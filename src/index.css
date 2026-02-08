@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .animate-bg-gradient {
+        background: linear-gradient(225deg, #ffe6ea, #ffc0cb, #ff8a9d, #ffc0cb);
+        background-size: 800% 800%;
+        animation: bg-animation 17s ease infinite;
+    }
+
+    @keyframes bg-animation {
+        0% { background-position: 93% 0%; }
+        50% { background-position: 0% 100%; }
+        100% { background-position: 93% 0%; }
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Kissing Season';
+        src: url('/fonts/KissingSeason.ttf') format('truetype') ;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Bokul';
+        src: url('/fonts/Bokul_UNICODE.ttf') format('truetype') ;
+        font-display: swap;
+    }
+}
+
+@theme {
+  --font-kissing: "Kissing Season", serif;
+  --font-bokul: "Bokul", serif;
+}
