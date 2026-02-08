@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import FloatingHearts from "../home/FloatingHearts";
 
 type SmokeyTextProps = {
@@ -10,7 +10,7 @@ const HEART_EMOJIS = ["❤️"];
 export default function SmokeyText({ text }: SmokeyTextProps) {
   const paras = text.split("\n");
 
-  const container = {
+  const container: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -19,7 +19,7 @@ export default function SmokeyText({ text }: SmokeyTextProps) {
     },
   };
 
-  const wordAnimation = {
+  const wordAnimation: Variants = {
     hidden: {
       opacity: 0,
       y: 12,
