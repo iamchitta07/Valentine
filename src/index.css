@@ -41,9 +41,15 @@
         src: url('/fonts/Bokul_UNICODE.ttf') format('truetype') ;
         font-display: swap;
     }
+    @font-face {
+        font-family: 'Floraison Amours';
+        src: url('/fonts/Floraison_Amours.ttf') format('truetype') ;
+        font-display: swap;
+    }
 }
 
 @theme {
   --font-kissing: "Kissing Season", serif;
   --font-bokul: "Bokul", serif;
+  --font-floraison: "Floraison Amours", serif;
 }

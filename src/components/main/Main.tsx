@@ -4,6 +4,7 @@ import AnimatedCards from "./moments/Moments";
 import Envelop from "./envelop/Envelop";
 import FloatingHearts from "../home/FloatingHearts";
 import EndPage from "./endPage/EndPage";
+import Footer from "./endPage/Footer";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <AnimatedCards />
       <Envelop />
       <EndPage />
+      <Footer />
     </div>
   );
 };

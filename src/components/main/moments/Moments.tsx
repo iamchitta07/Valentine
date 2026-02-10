@@ -30,7 +30,7 @@ const AnimatedCards: React.FC = () => {
         left: "50%",
         xPercent: -50,
         yPercent: -50,
-        scale: 3,
+        scale: 1.5,
         opacity: 1, // Start fully opaque
         duration: 2, // Takes up some scroll distance
         ease: "power2.inOut",
@@ -74,14 +74,14 @@ const AnimatedCards: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative overflow-hidden bg-pink-200 -z-2">
-      <div ref={sectionRef} className="min-h-screen w-screen flex items-center justify-center z-2">
+    <div ref={containerRef} className="relative overflow-hidden bg-pink-200">
         <h1
           ref={headerRef}
-          className="absolute top-8 text-black text-4xl uppercase font-bold font-bokul w-full text-center"
+          className="absolute top-10 text-black text-6xl uppercase font-bold font-bokul w-full text-center z-4"
         >
           কিছু মুহূর্ত
         </h1>
+      <div ref={sectionRef} className="top-10 min-h-screen w-screen flex items-center justify-center z-2">
 
         {cards.map((ele, i) => (
           <div
