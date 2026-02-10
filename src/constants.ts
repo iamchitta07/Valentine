@@ -30,7 +30,7 @@ import BACK8 from "/images/Card-8.png";
 import BACK9 from "/images/Card-9.png";
 import BACK10 from "/images/Card-10.png";
 
-import type { CardProps } from "./types";
+import type { CardProps, CardMsg } from "./types";
 
 export const GIFs: string[] = [STK1, STK2, STK3, STK4, STK5, STK6, STK7, STK8, STK9];
 export const nickNames: Array<string> = [
@@ -121,3 +121,11 @@ export const cards: CardProps[] = [
     backCard: BACK10
   },
 ];
+
+export const cardMsg: CardMsg[] = [
+  {title: '~My Dearest~', description: "Every moment with you is a treasure I hold dear..."},
+  {title: '~Forever Yours~', description: "I love you more than words can express. Be my Valentine?"},
+  {title: '~Always & Always~', description: "In every heartbeat, in every quiet moment, I find you. Loving you is my favourite forever."},
+  {title: '~Just Us~', description: "Through laughter, chaos, and calm, I choose you—today, tomorrow, and every day after."},
+  {title: '~With All My Heart~', description: "Every smile you share lights up my world, and every touch reminds me how lucky I am to love you."},
+]

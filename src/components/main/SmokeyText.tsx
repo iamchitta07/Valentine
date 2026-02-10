@@ -1,12 +1,6 @@
 import { motion, type Variants } from "framer-motion";
-import FloatingHearts from "../home/FloatingHearts";
+import type { SmokeyTextProps } from "../../types";
 
-type SmokeyTextProps = {
-  text: string;
-  className?: string;
-};
-
-const HEART_EMOJIS = ["❤️"];
 export default function SmokeyText({ text }: SmokeyTextProps) {
   const paras = text.split("\n");
 
@@ -38,8 +32,7 @@ export default function SmokeyText({ text }: SmokeyTextProps) {
 
   return (
     <div className="h-screen bg-pink-200 w-screen flex items-center justify-center">
-      <FloatingHearts HEART_EMOJIS={HEART_EMOJIS} />
-      <motion.div className="" variants={container} initial="hidden" animate="visible">
+      <motion.div className="z-2" variants={container} initial="hidden" animate="visible">
         <h1 className="font-bokul text-3xl font-bold text-center">মোর চিত্ত</h1>
         <h1 className="font-bokul text-xl text-center mb-3">~ তোমার প্রিয় ~</h1>
         {paras.map((para, idx) => {

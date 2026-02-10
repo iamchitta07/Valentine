@@ -5,8 +5,6 @@ import type { Coordinate } from "../../types";
 import { motion } from "framer-motion";
 import FloatingHearts from "./FloatingHearts";
 
-const HEART_EMOJIS = ["❤️", "💖", "💗", "💘", "💝", "💕", "💞"];
-
 const Home = ({ moveToHome }: { moveToHome: () => void }) => {
   const [noButtonPos, setNoButtonPos] = useState<Coordinate>({ x: 0, y: 0 });
   const [yesScale, setYesScale] = useState<number>(1);
@@ -50,7 +48,7 @@ const Home = ({ moveToHome }: { moveToHome: () => void }) => {
   };
   return (
     <div className="animate-bg-gradient w-screen min-h-screen ">
-      <FloatingHearts HEART_EMOJIS={HEART_EMOJIS} />
+      <FloatingHearts />
       <div className="w-screen min-h-screen flex flex-col items-center justify-center">
         <div className="h-40 w-40 z-2">
           <img src={GIFs[noText]} alt="GIFs" />

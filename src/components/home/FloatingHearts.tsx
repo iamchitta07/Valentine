@@ -7,31 +7,28 @@ type Heart = {
   size: number;
   duration: number;
   delay: number;
-  blur: number;
-  emoji: string;
 };
 
 const HEART_COUNT = 25;
-export default function FloatingHearts({HEART_EMOJIS}: {HEART_EMOJIS: string[]}) {
+
+export default function FloatingHeartsBackground() {
   const hearts = useMemo<Heart[]>(() => {
     return Array.from({ length: HEART_COUNT }).map((_, i) => ({
       id: i,
-      left: Math.random() * 100,
-      size: 16 + Math.random() * 24,
-      duration: 6 + Math.random() * 6,
+      left: Math.random() * 100, // %
+      size: 18 + Math.random() * 20, // px
+      duration: 6 + Math.random() * 6, // seconds
       delay: Math.random() * 5,
-      blur: Math.random() * 2, // depth blur
-      emoji: HEART_EMOJIS[Math.floor(Math.random() * HEART_EMOJIS.length)],
     }));
   }, []);
 
   return (
-    <div className="z-1 fixed inset-0 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-1">
       {hearts.map((heart) => (
         <motion.div
           key={heart.id}
           initial={{ y: "100vh", opacity: 0 }}
-          animate={{ y: "-10vh", x: ["0%", "10%", "-10%", "0%"], opacity: 1 }}
+          animate={{ y: "-10vh", opacity: 1 }}
           transition={{
             duration: heart.duration,
             delay: heart.delay,
@@ -40,13 +37,12 @@ export default function FloatingHearts({HEART_EMOJIS}: {HEART_EMOJIS: string[]})
             ease: "easeInOut",
           }}
           style={{
-            position: "absolute",
             left: `${heart.left}%`,
-            fontSize: `${heart.size}px`,
-            filter: `blur(${heart.blur}px)`,
+            fontSize: heart.size,
           }}
+          className="absolute"
         >
-          {heart.emoji}
+          ❤️
         </motion.div>
       ))}
     </div>
