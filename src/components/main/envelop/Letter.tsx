@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { LetterProps } from "../../../types";
 import { motion, useTransform } from "framer-motion";
 
@@ -14,11 +15,7 @@ const Letter = ({ index, scrollYProgress, title, description }: LetterProps) => 
   const start = 0.075 + index * step;
   const mid = start + step / 2;
   const end = start + step;
-
-  // For opacity, the original had a slight offset for the 3rd value
-  // L1: 0.1675 -> 0.21 (diff 0.0425)
-  // L2: 0.3525 -> 0.40 (diff 0.0475)
-  // We'll approximate the 3rd keyframe as mid + step/4
+  
   const opacityThird = mid + step / 4;
 
   const y = useTransform(scrollYProgress, [start, mid, end], [0, -100, 0]);
@@ -54,4 +51,4 @@ const Letter = ({ index, scrollYProgress, title, description }: LetterProps) => 
   );
 };
 
-export default Letter
+export default memo(Letter);

@@ -27,3 +27,8 @@ export interface SmokeyTextProps {
   text: string;
   className?: string;
 }
+
+export interface DraggableCardProps {
+    card: CardProps;
+    containerRef: React.RefObject<HTMLDivElement | null>;
+}

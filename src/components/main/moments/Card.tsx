@@ -1,4 +1,5 @@
 import type { CardProps } from "../../../types";
+import { memo } from "react";
 
 const Card = ({ image, title, description }: CardProps) => {
   return (
@@ -14,4 +15,4 @@ const Card = ({ image, title, description }: CardProps) => {
   );
 };
 
-export default Card;
+export default memo(Card);
