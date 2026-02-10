@@ -12,10 +12,10 @@ const Envelop = () => {
 
   // Animation values for the envelope itself
   const flapZIndex = useTransform(scrollYProgress, [0, 0.08], [20, 1]);
-  const flapRotate = useTransform(scrollYProgress, [0, 0.08], [0, 180]);
+  const flapRotate = useTransform(scrollYProgress, [0.03, 0.08], [0, 180]);
 
   const heartZIndex = useTransform(scrollYProgress, [0, 0.08], [20, 10]);
-  const heartRotate = useTransform(scrollYProgress, [0, 0.1], [0, 45]);
+  const heartRotate = useTransform(scrollYProgress, [0, 0.03], [0, 60]);
 
   return (
     <div ref={containerRef} className="h-[600vh] w-full relative bg-pink-200">
