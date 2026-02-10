@@ -41,10 +41,10 @@ const Letter = ({ index, scrollYProgress, title, description }: LetterProps) => 
       }}
       className="absolute bottom-2 w-64 h-42 md:w-72 md:h-52 bg-pink-100 p-4 text-center rounded-xl shadow-lg border border-gray-200 flex flex-col items-center justify-center"
     >
-      <p className="font-kissing text-gray-700 text-xl md:text-2xl font-bold">
+      <p className="font-kissing text-red-600 text-xl md:text-2xl font-bold">
         {title}
       </p>
-      <p className="font-kissing mt-2 text-xs md:text-sm text-gray-600 font-medium">
+      <p className="font-kissing mt-2 text-xs md:text-sm text-rose-400 font-xl">
         {description}
       </p>
     </motion.div>
