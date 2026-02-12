@@ -77,7 +77,7 @@ const AnimatedCards: React.FC = () => {
     <div ref={containerRef} className="relative overflow-hidden bg-pink-200">
         <h1
           ref={headerRef}
-          className="absolute top-10 text-black text-6xl uppercase font-bold font-bokul w-full text-center z-4"
+          className="absolute top-0 text-black text-6xl uppercase font-bold font-bokul w-full text-center z-4"
         >
           কিছু মুহূর্ত
         </h1>

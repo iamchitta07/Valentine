@@ -38,7 +38,7 @@ const EndPage = () => {
       <h1 className="absolute top-20 font-floraison text-6xl font-bold z-2 text-pink-900 pointer-events-none select-none">
          Priceless Moments
       </h1>
-      {cards.slice(0, 7).map((card, index) => (
+      {cards.map((card, index) => (
         <DraggableCard key={index} card={card} containerRef={containerRef} />
       ))}
     </div>
