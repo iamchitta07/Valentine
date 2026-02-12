@@ -14,9 +14,9 @@ const DraggableCard = ({ card, containerRef }: DraggableCardProps) => {
             whileDrag={{ scale: 1.1, cursor: "grabbing", zIndex: 100 }}
             whileTap={{ scale: 1.05, cursor: "grabbing" }}
             style={{ x, y, rotate }}
-            className="absolute inset-0 m-auto w-48 h-64 bg-white p-2 rounded-xl shadow-2xl cursor-grab flex flex-col items-center gap-2 hover:shadow-3xl transition-shadow z-10"
+            className="absolute inset-0 m-auto w-44 h-56 bg-white p-2 rounded-xl shadow-2xl cursor-grab flex flex-col items-center gap-2 hover:shadow-3xl transition-shadow z-10"
         >
-            <div className="w-full h-62 overflow-hidden rounded-lg pointer-events-none select-none">
+            <div className="w-full h-54 overflow-hidden rounded-lg pointer-events-none select-none">
                 <img
                     src={card.image}
                     alt={card.title}

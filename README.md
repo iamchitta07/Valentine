@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Valentine - A Digital Valentine's Day Experience 💝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, interactive React-based web application designed to celebrate Valentine's Day. This project features smooth animations, draggable elements, and a heartfelt countdown timer to cherish special moments.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Interactive Landing Page**: A welcoming introduction with smooth transitions.
+-   **"Moments" Gallery**: A curated display of photo memories with descriptions.
+-   **Draggable Photo Cards**: An interactive "End Page" where users can drag and toss photo cards around the screen.
+    -   *Tech Note*: Uses `framer-motion` for physics-based gestures and `useMotionValue` for stable, glitch-free dragging.
+-   **Relationship Timer**: A live countdown timer showing the duration of togetherness in Days, Hours, and Minutes.
+-   **Responsive Design**: optimized for various screen sizes.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend Framework**: [React 19](https://react.dev/)
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Styling**: [TailwindCSS 4](https://tailwindcss.com/)
+-   **Animations**:
+    -   [Framer Motion](https://www.framer.com/motion/) (Gestures, layout transitions)
+    -   [GSAP](https://greensock.com/gsap/) (Complex timeline animations)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   Node.js (Latest LTS recommended)
+-   npm or bun
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/iamchitta07/Valentine.git
+    cd Valentine
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    bun install
+    ```
+
+3.  Run the development server:
+    ```bash
+    npm run dev
+    # or
+    bun dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 📦 Build for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will generate the static files in the `dist` directory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   `src/components`: Contains all React components (Home, Main, EndPage, etc.).
+-   `src/constants.ts`: Stores static data like image URLs and messages.
+-   `src/types.ts`: TypeScript interfaces and type definitions.
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own special someone!
+
+## 🧑‍💻 Author
+
+- [Chittajit Nath](https://github.com/iamchitta07)
