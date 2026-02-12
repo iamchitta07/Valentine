@@ -33,11 +33,13 @@ const EndPage = () => {
          <h1 className="text-3xl md:text-6xl text-pink-600 font-bold text-center px-4 font-floraison z-2">
             {timeTogether}
          </h1>
+         <h2 className="font-floraison text-2xl text-red-700 underline">Happy Valentine's Day, Babeeee 💝</h2>
       </div>
 
-      <h1 className="absolute top-20 font-floraison text-6xl font-bold z-2 text-pink-900 pointer-events-none select-none">
-         Priceless Moments
-      </h1>
+      <div className="absolute top-12 z-2  pointer-events-none select-none">
+         <h1 className="font-floraison text-6xl font-bold text-pink-800 text-center">Priceless Moments</h1>
+         <p className="font-floraison text-2xl font-bold text-pink-700 text-center">Drag the Images for Surprise</p>
+      </div>
       {cards.map((card, index) => (
         <DraggableCard key={index} card={card} containerRef={containerRef} />
       ))}
