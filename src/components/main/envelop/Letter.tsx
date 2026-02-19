@@ -25,7 +25,8 @@ const Letter = ({ index, scrollYProgress, title, description }: LetterProps) => 
     [0.8, 1, 1, 1]
   );
   const scale = useTransform(scrollYProgress, [start, mid, end], [0.9, 1, 1]);
-  const zIndex = useTransform(scrollYProgress, [start, mid, end], [1, 20, 20]);
+  const zValue = index===0 ? 2 : 1;
+  const zIndex = useTransform(scrollYProgress, [start, mid, end], [zValue, 20, 20]);
   
   const rotationValues = ROTATION_PATTERNS[index % ROTATION_PATTERNS.length];
   const rotate = useTransform(scrollYProgress, [start, mid, end], rotationValues);

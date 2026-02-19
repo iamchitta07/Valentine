@@ -8,27 +8,27 @@ import STK7 from "/gifs/STK-7.webp";
 import STK8 from "/gifs/STK-8.webp";
 import STK9 from "/gifs/STK-9.webp";
 
-import IMG1 from "/images/IMG-1.jpg";
-import IMG2 from "/images/IMG-2.jpg";
-import IMG3 from "/images/IMG-3.jpg";
-import IMG4 from "/images/IMG-4.jpg";
-import IMG5 from "/images/IMG-5.jpg";
-import IMG6 from "/images/IMG-6.jpg";
-import IMG7 from "/images/IMG-7.jpg";
-import IMG8 from "/images/IMG-8.jpg";
-import IMG9 from "/images/IMG-9.jpg";
-import IMG10 from "/images/IMG-10.jpg";
+import IMG1 from "/images/IMG-1.webp";
+import IMG2 from "/images/IMG-2.webp";
+import IMG3 from "/images/IMG-3.webp";
+import IMG4 from "/images/IMG-4.webp";
+import IMG5 from "/images/IMG-5.webp";
+import IMG6 from "/images/IMG-6.webp";
+import IMG7 from "/images/IMG-7.webp";
+import IMG8 from "/images/IMG-8.webp";
+import IMG9 from "/images/IMG-9.webp";
+import IMG10 from "/images/IMG-10.webp";
 
-import BACK1 from "/images/Card-1.png";
-import BACK2 from "/images/Card-2.png";
-import BACK3 from "/images/Card-3.png";
-import BACK4 from "/images/Card-4.png";
-import BACK5 from "/images/Card-5.png";
-import BACK6 from "/images/Card-6.png";
-import BACK7 from "/images/Card-7.png";
-import BACK8 from "/images/Card-8.png";
-import BACK9 from "/images/Card-9.png";
-import BACK10 from "/images/Card-10.png";
+import BACK1 from "/images/Card-1.webp";
+import BACK2 from "/images/Card-2.webp";
+import BACK3 from "/images/Card-3.webp";
+import BACK4 from "/images/Card-4.webp";
+import BACK5 from "/images/Card-5.webp";
+import BACK6 from "/images/Card-6.webp";
+import BACK7 from "/images/Card-7.webp";
+import BACK8 from "/images/Card-8.webp";
+import BACK9 from "/images/Card-9.webp";
+import BACK10 from "/images/Card-10.webp";
 
 import type { CardProps, CardMsg } from "./types";
 
