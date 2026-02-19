@@ -78,10 +78,11 @@ const Envelop = () => {
               preserveAspectRatio="none"
             >
               <path
-                d="M0,0 L50,60 L100,0 Z"
-                fill="#db2777"
-                stroke="#be185d"
-                strokeWidth="1"
+                // d="M1,0 L1,5 L50,60 L99,5 L99,0 Z"
+                d="M1,0 L1,5 L45,55 Q50 60 55,55 L55,55 L99,5 L99,0 Z"
+                fill="#ec4899"
+                stroke="#db2777"
+                strokeWidth="2"
               />
             </svg>
           </motion.div>
